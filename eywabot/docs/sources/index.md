@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/farizrahman4u/eywa.svg?branch=master)](https://travis-ci.org/farizrahman4u/eywa)
 
-Eywa is an open source framework for building and deploying conversational agents (aka chatbots).
+Eywa is an open source framework for building and deploying conversational agents (aka chatbots). 
 
 #### Features:
 * Requires only few samples for training
@@ -73,3 +73,5 @@ git clone https://www.github.com/farizrahman4u/eywa.git
 cd eywa
 python setup.py install
 ```
+
+

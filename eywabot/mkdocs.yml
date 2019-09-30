@@ -1,0 +1,23 @@
+site_name:  Eywa - Framework for Conversational Agents
+theme:
+  include_search_page: true
+  search_index_only: false
+  highlightjs: true
+  hljs_languages: []
+  include_homepage_in_sidebar: true
+  prev_next_buttons_location: bottom
+  navigation_depth: 4
+  titles_only: false
+  sticky_navigation: true
+  collapse_navigation: true
+docs_dir: sources
+repo_url: https://github.com/abhijithneilabraham/eywa/tree/master/eywa
+site_url: https://abhijithneilabraham.github.io/eywabot/
+
+nav:
+- Home: index.md
+- examples:
+  -Examples: agent.md
+- Models:
+  - Classifier: Classifier.md
+  -EntityExtractor: EntityExtractor.md
