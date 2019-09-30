@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+     <loc>https://abhijithneilabraham.github.io/eywabot/</loc>
+     <lastmod>2019-09-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://abhijithneilabraham.github.io/eywabot/examples/agent/</loc>
+     <lastmod>2019-09-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://abhijithneilabraham.github.io/eywabot/models/Classifer/</loc>
+     <lastmod>2019-09-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://abhijithneilabraham.github.io/eywabot/models/EntityExtractor/</loc>
+     <lastmod>2019-09-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+</urlset>

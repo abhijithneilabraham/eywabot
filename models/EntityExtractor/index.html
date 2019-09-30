@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://abhijithneilabraham.github.io/eywabot/models/EntityExtractor/">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>EntityExtractor - Eywa - Framework for Conversational Agents</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Source+Sans+Pro:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "EntityExtractor";
+    var mkdocs_page_input_path = "models/EntityExtractor.md";
+    var mkdocs_page_url = "/eywabot/models/EntityExtractor/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <a href="">
+        <div class="keras-logo">
+          <img src="/img/eywalogo.png" class="keras-logo-img">
+          Eywa Documentation
+        </div>
+      </a>
+
+      <div class="wy-side-nav-search">
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Eywa - Framework for Conversational Agents</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../..#features">Features:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#quickstart">Quickstart</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../..#classifier">Classifier</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../..#entity-extractor">Entity extractor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../..#pattern">Pattern</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../..#requirements">Requirements</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#installation">Installation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../..#via-pip">Via pip:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../..#install-from-source">Install from source:</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Examples</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../examples/agent/">Agent</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Models</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../Classifer/">Classifer</a>
+    <ul>
+    </ul>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">EntityExtractor</a>
+    <ul class="current">
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Eywa - Framework for Conversational Agents</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Models &raquo;</li>
+        
+      
+    
+    <li>EntityExtractor</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/keras-team/keras/tree/master/docs"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h3 id="fit">fit</h3>
+<pre><code class="python">fit(X, Y)
+</code></pre>
+
+<p>Trains the model on given data.
+<strong>Arguments</strong></p>
+<p>X: Input utterance(s). It could be:
+- <code>str</code> (or <code>list</code> thereof)
+- <code>Document</code> instance (or <code>list</code> thereof)</p>
+<p>Y: Target values. <code>dict</code> mapping from from entity name (<code>str</code>)
+  to entity value (<code>str</code>)(or list thereof).
+  The entity names should be same throughout all <code>dict</code> 
+  elements and number of <code>dict</code> elements should be
+  same as the number of elements of X.
+<strong>Example</strong></p>
+<p>Train an <code>EntityExtractor</code> to extract entities "intent" and "place" from utterances
+labels "intent" and "place":</p>
+<pre><code class="python">x = ['who was the first president of USA', 'which party got elected last time']
+y = [{'intent': 'politics', 'place': 'USA'}, {'intent': 'politics','place': 'here'}]
+ex = EntityExtractor()
+ex.fit(x, y)
+</code></pre>
+
+<hr />
+<h3 id="predict">predict</h3>
+<pre><code class="python">predict(x, keys=None, return_scores=False)
+</code></pre>
+
+<p>Extracts entities for  given input utterance(s).</p>
+<p><strong>Arguments</strong></p>
+<p>x: Input utterance(s). It could be:
+- <code>str</code> (or <code>list</code>/<code>tuple</code> thereof)
+- <code>Document</code> instance (or <code>list</code>/<code>tuple</code> thereof)</p>
+<p><code>return_scores</code>: <code>bool</code>. Default <code>False</code>.
+If <code>True</code>, Returns a dict (or list thereof if x is a list) mapping entity names
+to a list of tuples, where each tuple consists of a possible entity value (<code>str</code>)
+and a confidence score (<code>float</code>).
+Else, returns entity name for entity value with highest confidence per utterance.
+<code>keys</code>:list of str.  entities to be extracted. 
+If not specified, all entities will be extracted.</p>
+<p><strong>Returns</strong></p>
+<p>if <code>return_scores</code> is <code>True</code>:
+if <code>x</code> is a single utterance:
+    Returns a <code>list</code> of <code>dict</code>s of the
+    form (entity name, confidence) for each class,
+    sorted by decreasing order of confidence.
+if <code>x</code> is a <code>list</code>/<code>tuple</code> of utterances:
+    Returns a <code>list</code> of results with 1 result per
+    utterance. Each result will be a <code>list</code> of
+    <code>dict</code>s of the form (entity name, confidence) for
+    each class, sorted by decreasing order of confidence.
+if <code>return_scores</code> is <code>False</code>:
+if <code>x</code> is a single utterance:
+    Returns the predicted label as <code>dict</code>.
+if <code>x</code> is a <code>list</code>/<code>tuple</code> of utterances:
+    Returns the predicted labels for utterances as <code>list</code> of
+    <code>dict</code>s.</p>
+<hr />
+<h3 id="evaluate">evaluate</h3>
+<pre><code class="python">evaluate(X=None, Y=None)
+</code></pre>
+
+<p>Evaluates the EntityExtractor on given data.</p>
+<p>Either both <code>X</code> and <code>Y</code> arguments should be provided
+or both of them should be left unspecified (<code>None</code>).
+If left unspecified, the cumilative data used to train
+the <code>EntityExtractor</code> will be used for evaluation .</p>
+<p><strong>Arguments</strong></p>
+<p>X: Input utterance(s). It could be:
+- <code>str</code> (or <code>list</code> thereof)
+- <code>Document</code> instance (or <code>list</code> thereof)</p>
+<p>Y: Target values. <code>dict</code> mapping from from entity name (<code>str</code>)
+  to entity value (<code>str</code>)(or list thereof).
+  The entity names should be same throughout all <code>dict</code> 
+  elements and number of <code>dict</code> elements should be
+  same as the number of elements of X.</p>
+<p><strong>Returns</strong></p>
+<p><code>tuple</code> of error(<code>float</code>) and accuracy(<code>float</code>)</p>
+<hr />
+<h3 id="serialize">serialize</h3>
+<pre><code class="python">serialize()
+</code></pre>
+
+<p>Serializes the <code>EntityExtractor</code> object to a json
+friendly config.</p>
+<p><strong>Returns</strong></p>
+<p><code>dict</code></p>
+<hr />
+<h3 id="deserialize">deserialize</h3>
+<pre><code class="python">deserialize(config)
+</code></pre>
+
+<p>Deserializes a <code>EntityExtractor</code> config to a <code>EntityExtractor</code> instance.</p>
+<p><strong>Arguments</strong></p>
+<p>config: <code>dict</code>. <code>EntityExtractor</code> config (generated by <code>EntityExtractor.serialize</code>).</p>
+<p><strong>Returns</strong></p>
+<p><code>EntityExtractor</code> instance</p>
+<hr />
+<h3 id="set_weights">set_weights</h3>
+<pre><code class="python">set_weights(weights)
+</code></pre>
+
+<p>Sets weights of the <code>EntityExtractor</code> to given
+values.</p>
+<p><strong>Arguments</strong></p>
+<p>weights: <code>list</code> of numpy arrays</p>
+<hr />
+<h3 id="get_weights">get_weights</h3>
+<pre><code class="python">get_weights()
+</code></pre>
+
+<p>Returns weights of the <code>EntityExtractor</code>.</p>
+<p><strong>Returns</strong></p>
+<p><code>list</code> of numpy arrays</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../Classifer/" class="btn btn-neutral" title="Classifer"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/abhijithneilabraham/eywa/tree/master/eywa/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Classifer/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script type="text/javascript" defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(false);
+        };
+    </script>
+
+</body>
+</html>
