@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Documentation for Eywa,the Conversational AI">
+
+  <link rel="canonical" href="https://abhijithneilabraham.github.io/eywabot/">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Eywa - Framework for Conversational Agents - Eywa - Framework for Conversational Agents</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Source+Sans+Pro:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Eywa - Framework for Conversational Agents";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = "/eywabot/";
+  </script>
+
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <a href="">
+        <div class="keras-logo">
+          <img src="img/eywalogo.png" class="keras-logo-img">
+          Eywa Documentation
+        </div>
+      </a>
+
+      <div class="wy-side-nav-search">
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href=".">Eywa - Framework for Conversational Agents</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#features">Features:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#quickstart">Quickstart</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#classifier">Classifier</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#entity-extractor">Entity extractor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pattern">Pattern</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#via-pip">Via pip:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#install-from-source">Install from source:</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Examples</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="examples/agent/">Agent</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Models</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="models/Classifer/">Classifer</a>
+    <ul>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="models/EntityExtractor/">EntityExtractor</a>
+    <ul>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">Eywa - Framework for Conversational Agents</a>
+      </nav>
+
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+
+
+
+    <li>Eywa - Framework for Conversational Agents</li>
+    <li class="wy-breadcrumbs-aside">
+
+        <a href="https://github.com/keras-team/keras/tree/master/docs"
+          class="icon icon-github"> Edit on GitHub</a>
+
+    </li>
+  </ul>
+
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+
+                <h1 id="eywa-framework-for-conversational-agents">Eywa - Framework for Conversational Agents</h1>
+<p><img  align="right" height="20%" width="20%" src="https://raw.githubusercontent.com/farizrahman4u/eywa/master/logo1.png"/></p>
+<p><a href="https://travis-ci.org/farizrahman4u/eywa"><img alt="Build Status" src="https://travis-ci.org/farizrahman4u/eywa.svg?branch=master" /></a></p>
+<p>Eywa is an open source framework for building and deploying conversational agents (aka chatbots). </p>
+<h4 id="features">Features:</h4>
+<ul>
+<li>Requires only few samples for training</li>
+<li>Instant retraining</li>
+<li>Uses word embeddings + heuristics instead of deep learning (better debuggability and interpretability)</li>
+</ul>
+<h2 id="quickstart">Quickstart</h2>
+<h3 id="classifier">Classifier</h3>
+<pre><code class="python">from eywa.nlu import Classifier
+
+
+x_hotel = ['book a hotel', 'need a nice place to stay', 'any motels near by']
+x_weather = ['what is the weather like', 'is it hot outside']
+
+clf = Classifier()
+clf.fit(x_hotel, 'hotel')
+clf.fit(x_weather, 'weather')
+
+print(clf.predict('will it rain today'))  # &gt;&gt;&gt; 'weather'
+print(clf.predict('find a place to stay'))  # &gt;&gt;&gt; 'hotel'
+</code></pre>
+
+<h3 id="entity-extractor">Entity extractor</h3>
+<pre><code class="python">from eywa.nlu import EntityExtractor
+
+x = ['what is the weather in tokyo', 'what is the weather', 'what is the weather like in kochi']
+y = [{'intent': 'weather', 'place': 'tokyo'}, {'intent': 'weather', 'place': 'here'}, {'intent': 'weather', 'place': 'kochi'}]
+
+ex = EntityExtractor()
+ex.fit(x, y)
+
+x_test = 'what is the weather in london like'
+print(ex.predict(x_test))
+</code></pre>
+
+<h3 id="pattern">Pattern</h3>
+<pre><code class="python">from eywa.nlu import Pattern
+
+p = Pattern('[fruit: apple, banana] is my favourite fruit')  # create variable [fruit] with sample values {apple, babana}
+
+p('i like grapes')  # &gt;&gt; {'fruit' : 'grapes'}
+</code></pre>
+
+<h3 id="requirements">Requirements</h3>
+<ul>
+<li>Python 3.6 or higher</li>
+<li>Eywa requires <a href="https://www.tensorflow.org/install/pip">Tensorflow 2.0</a> and should be installed manually by the user (is not installed automatically as a dependency)</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<h3 id="via-pip">Via pip:</h3>
+<p><code>pip install eywa</code></p>
+<h3 id="install-from-source">Install from source:</h3>
+<pre><code>git clone https://www.github.com/farizrahman4u/eywa.git
+cd eywa
+python setup.py install
+</code></pre>
+
+            </div>
+          </div>
+          <footer>
+
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+
+        <a href="examples/agent/" class="btn btn-neutral float-right" title="Agent">Next <span class="icon icon-circle-arrow-right"></span></a>
+
+
+    </div>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+
+          <a href="https://github.com/abhijithneilabraham/eywa/tree/master/eywa/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+
+
+
+        <span style="margin-left: 15px"><a href="examples/agent/" style="color: #fcfcfc">Next &raquo;</a></span>
+
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script type="text/javascript" defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(false);
+        };
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.0.4
+Build Date UTC : 2019-09-30 14:58:47
+-->
