@@ -16,10 +16,4 @@ theme:
 docs_dir: docs/sources
 repo_url: https://github.com/abhijithneilabraham/eywa/tree/master/eywa
 site_url: https://abhijithneilabraham.github.io/eywabot/
-
-nav:
-- Home: 'index.md'
--Getting Started:
-  -Classifier: 'models/Classifier.md'
-  -EntityExtractor: 'models/EntityExtractor.md'
-  -examples: 'examples/agent.md'
+site_description: 'Documentation for Eywa,the Conversational AI'

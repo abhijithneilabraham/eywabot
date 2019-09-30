@@ -11,14 +11,14 @@ current conversatonal capablities.
 
 Sample conversation
 
-Agent : Hello
+Agent : Hello   
         what would you like me to do ?
-you   : what is the weather in New York
-Agent : The weather in New_York is warm
-you   : book a cab to NYC
-Agent : Booking a cab for NYC
-you   : what is the date today
-Agent : Today is 2019-01-17
+you   : what is the weather in New York?   
+Agent : The weather in New_York is warm.   
+you   : book a cab to NYC.   
+Agent : Booking a cab for NYC.   
+you   : what is the date today?   
+Agent : Today is 2019-01-17.   
 
 
 ```python
