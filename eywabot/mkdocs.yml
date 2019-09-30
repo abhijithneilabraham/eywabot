@@ -12,15 +12,14 @@ theme:
   prev_next_buttons_location: bottom
   navigation_depth: 4
   titles_only: false
-  sticky_navigation: true
-  collapse_navigation: true
-docs_dir: sources
+
+docs_dir: docs/sources
 repo_url: https://github.com/abhijithneilabraham/eywa/tree/master/eywa
 site_url: https://abhijithneilabraham.github.io/eywabot/
 
 nav:
-- Home: index.md
+- Home: 'index.md'
 -Getting Started:
-  -Classifier: /models/Classifier.md
-  -EntityExtractor: /models/EntityExtractor.md
-  -examples: /examples/agent.md
+  -Classifier: 'models/Classifier.md'
+  -EntityExtractor: 'models/EntityExtractor.md'
+  -examples: 'examples/agent.md'
