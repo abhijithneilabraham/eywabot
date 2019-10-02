@@ -10,7 +10,7 @@
   {% if config.site_author %}<meta name="author" content="{{ config.site_author }}">{% endif %}
   {% if page and page.canonical_url %}<link rel="canonical" href="{{ page.canonical_url }}">{% endif %}
   {% if config.site_favicon %}<link rel="shortcut icon" href="{{ config.site_favicon|url }}">
-  {% else %}<link rel="shortcut icon" href="{{ 'img/eywalogo.png'|url }}">{% endif %}
+    {% else %}<link rel="shortcut icon" href="{{ 'img/eywalogo.png'|url }}">{% endif %}
   {%- endblock %}
 
   {%- block htmltitle %}
@@ -76,7 +76,7 @@
     <div class="wy-side-scroll">
       <a href="{{ homepage_url }}">
         <div class="keras-logo">
-          <img src="img/eywalogo.png" class="keras-logo-img">
+          <img src="/img/eywalogo.png" class="keras-logo-img">
           Eywa Documentation
         </div>
       </a>
@@ -89,7 +89,6 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-
         {%- block site_nav %}
         {%- set navlevel = 1 %}
         {%- for nav_item in nav %}
@@ -129,9 +128,7 @@
           {% include "breadcrumbs.html" %}
           <div role="main">
             <div class="section">
-
               {% block content %}
-
                 {{ page.content }}
               {% endblock %}
             </div>

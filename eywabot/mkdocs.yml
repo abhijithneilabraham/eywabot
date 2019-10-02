@@ -18,8 +18,7 @@ repo_url: https://github.com/abhijithneilabraham/eywa/tree/master/eywa
 site_url: https://abhijithneilabraham.github.io/eywabot/
 site_description: 'Documentation for Eywa,the Conversational AI'
 nav:
--Home: index.md
--Examples: examples/agent.md
--Models:
-  -Classifier: models/Classifier.md
-  -EntityExtractor: models/EntityExtractor.md
+    - Eywa - Framework for Conversational Agents: index.md
+    - Models:
+             Classifier: models/Classifer.md
+             EntityExtractor: models/EntityExtractor.md
