@@ -130,7 +130,7 @@ td, th {
 .keras-logo {
     max-height: 55px;
     width: 100%;
-    background: #d00000;
+    background: #008bd0;
     font-size: 140%;
     color: white;
     font-family: "Source Sans Pro", "ff-tisa-web-pro", "Georgia", Arial, sans-serif;
@@ -144,4 +144,3 @@ td, th {
 h1, h2, h3, h4, h5, h6, legend {
     font-family: "Source Sans Pro", "ff-tisa-web-pro", "Georgia", Arial, sans-serif;,
 }
-
