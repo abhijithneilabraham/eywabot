@@ -131,12 +131,19 @@
           <div role="main">
             <div class="section">
               
-                <h3 id="fit">fit</h3>
+                <p><span style="float:right;"><a href="https://github.com/farizrahman4u/eywa/tree/master/eywa/nlu/entity_extractor.py#L9">[source]</a></span></p>
+<h3 id="entityextractor">EntityExtractor</h3>
+<pre><code class="python">eywa.nlu.entity_extractor.EntityExtractor()
+</code></pre>
+
+<p>Gets the required entities from the input.</p>
+<hr />
+<h3 id="fit">fit</h3>
 <pre><code class="python">fit(X, Y)
 </code></pre>
 
-<p>Trains the model on given data.
-<strong>Arguments</strong></p>
+<p>Trains the model on given data.</p>
+<p><strong>Arguments</strong></p>
 <p>X: Input utterance(s). It could be:
 - <code>str</code> (or <code>list</code> thereof)
 - <code>Document</code> instance (or <code>list</code> thereof)</p>
@@ -144,8 +151,8 @@
   to entity value (<code>str</code>)(or list thereof).
   The entity names should be same throughout all <code>dict</code> 
   elements and number of <code>dict</code> elements should be
-  same as the number of elements of X.
-<strong>Example</strong></p>
+  same as the number of elements of X.</p>
+<p><strong>Example</strong></p>
 <p>Train an <code>EntityExtractor</code> to extract entities "intent" and "place" from utterances
 labels "intent" and "place":</p>
 <pre><code class="python">x = ['who was the first president of USA', 'which party got elected last time']
